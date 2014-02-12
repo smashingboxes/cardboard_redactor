@@ -1,0 +1,35 @@
+= CardboardRedactor
+
+== Intallation Instructions
+Add to your gemfile
+```
+gem 'cardboard_cms', git: 'git@github.com:smashingboxes/cardboard.git'
+gem 'cardboard_redactor', git: 'git@github.com:smashingboxes/cardboard_redactor.git'
+
+``` 
+
+=== Assets
+Then to your cardboard.js
+
+```
+//= require cardboard/redactor
+//= require cardboard/redactor/highlight
+
+$(document).on("page:load ready cocoon:after-insert", function(e){
+    $('.redactor').redactor({
+      plugins: ['fullscreen'],
+      imageUpload: '/cardboard/redactor/image'
+      // Uncomment as need be (these routes are created for you)
+      // imageGetJson: '/cardboard/redactor/images'
+      // fileUpload: '/cardboard/redactor/file'
+    });
+});
+```
+
+=== Migrations
+```
+rake cardboard_redactor:install:migrations
+rake db:migrate
+```
+
+This project rocks and copyright of SmashingBoxes.
