@@ -3,15 +3,13 @@ require_dependency "cardboard/application_controller"
 module Cardboard
   class RedactorController < ApplicationController
 
-    # skip_before_action :verify_authenticity_token
-
     def upload_image
       asset = Redactor::Image.create(file: params[:file])
       render json: { filelink: asset.file.url, filename: asset.file.name}
     end
 
     def upload_file
-      asset = Redactor::File.create(file: params[:file])
+      asset = Redactor::Document.create(file: params[:file])
       render json: { filelink: asset.file.url, filename: asset.file.name}
     end
 

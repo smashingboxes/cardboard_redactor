@@ -12,6 +12,7 @@
 
 (function($)
 {
+
 	var uuid = 0;
 
 	"use strict";
