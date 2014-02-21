@@ -1,17 +1,19 @@
-= CardboardRedactor
+# Cardboard Redactor
+Add redactor to your cardboard project
+*Note:* You need to purchase your own license from redactor at http://imperavi.com/redactor/download/
 
-== Intallation Instructions
+## Intallation Instructions
 Add to your gemfile
 ```
-gem 'cardboard_cms', git: 'git@github.com:smashingboxes/cardboard.git'
-gem 'cardboard_redactor', git: 'git@github.com:smashingboxes/cardboard_redactor.git'
+gem 'cardboard_cms', github: 'smashingboxes/cardboard'
+gem 'cardboard_redactor', github: 'smashingboxes/cardboard_redactor'
 
 ``` 
 
-=== Assets
-Then to your cardboard.js
+### Assets
+Then to your `cardboard.js`
 
-```
+```javascript
 //= require cardboard/redactor
 //= require cardboard/redactor/highlight
 
@@ -36,10 +38,10 @@ $(window).bind('page:change', window.init_redactor);
 
 ```
 
-=== Migrations
+### Migrations
 ```
 rake cardboard_redactor:install:migrations
 rake db:migrate
 ```
 
-This project rocks and copyright of SmashingBoxes.
+copyright of SmashingBoxes.
