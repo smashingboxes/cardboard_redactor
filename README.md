@@ -25,9 +25,9 @@ window.init_redactor = function(){
     params = csrf_param + "=" + encodeURIComponent(csrf_token);
   }
     $('.redactor').redactor({
-      plugins: ['fullscreen'],
-      imageUpload: "/cardboard/redactor/image?" + params
-      // Uncomment as need be (these routes are created for you)
+      plugins: ['fullscreen']
+      // // Uncomment as need be (these routes are created for you)
+      // imageUpload: "/cardboard/redactor/image?" + params
       // imageGetJson: '/cardboard/redactor/images'
       // fileUpload: '/cardboard/redactor/file?' + params
     });
@@ -39,6 +39,7 @@ $(window).bind('page:change', window.init_redactor);
 ```
 
 ### Migrations
+If you are using image or file upload you'll need to run the following
 ```
 rake cardboard_redactor:install:migrations
 rake db:migrate
