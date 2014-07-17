@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files      = `git ls-files`.split("\n").sort - %w(.rvmrc .gitignore)
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "cardboard_cms", "~> 0.2.0"
+  s.add_dependency "cardboard_cms", "~> 0.3.0"
   
   s.add_development_dependency "sqlite3"
 end
