@@ -68,7 +68,7 @@
 #redactor_modal_overlay,
 #redactor_modal,
 .redactor_dropdown {
-  z-index: 100 !important;
+  z-index: 102 !important;
 }
 /*
 	AIR
