@@ -13,10 +13,10 @@ Gem::Specification.new do |s|
   s.summary     = "Cardboard extras for SmashingBoxes"
   s.description = "This project is closed source."
 
-  s.files      = `git ls-files`.split("\n").sort - %w(.rvmrc .gitignore)
+  s.files      = `git ls-files`.split("\n").sort - %w(.rvmrc .gitignore .keep)
   s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "cardboard_cms", "~> 0.2.0"
+  s.add_dependency "cardboard_cms", ">= 0.2.0"
   
   s.add_development_dependency "sqlite3"
 end
